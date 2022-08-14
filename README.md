@@ -1,2 +1,3 @@
 # devhunt-edition-1-Ghosts-coder
-#make our siteweb online
+#make our website online
+#required connexion
