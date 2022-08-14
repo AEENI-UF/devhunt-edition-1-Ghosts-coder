@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>AEENI</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="c.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<style>
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+
+
+ .annuler {
+  cursor: pointer;
+ }
+  /* @keyframes anima {
+      
+      60% {
+          background: url("IMG_0305.jpg") center/cover repeat fixed;
+
+      }
+  } */
+  header {
+      background: transparent;
+      width: 100%;
+     
+  } 
+  
+  nav {
+      background-color: rgb(78, 37, 37);
+box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815);
+        z-index: 2;
+      width: 100%;
+      top: 0;
+     
+  }
+  nav a {
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.1rem;
+      list-style: none;
+  }
+  nav a:hover {
+      color: chocolate;
+  }
+  .container-fluid {
+      margin-top: 5%;
+  }
+  .container-fluid p {
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  .container-fluid h1 {
+      border-bottom: 2px solid orange;
+  }
+  .container-fluid .col-lg-4 {
+      background-color: rgba(0, 0, 0, 0.116);
+  }
+  .container-fluid button {
+      background-color: rgba(210, 105, 30, 0.685);
+  }
+  .container-fluid button:hover {
+      background-color: black;
+
+  }
+  .mycontainer ul li {
+      padding-top: 10px;
+      list-style: none;
+      font-weight: bold;
+      padding: 10px;
+      color: white;
+
+  }
+  .mycontainer ul li:hover {
+      color: yellow;
+  }
+  .mycontainer li  a {
+      list-style: none;
+      color: white;
+      overflow: hidden;
+      padding: 10px;
+  }
+  .mycontainer ul li:hover {
+  color: yellow;
+  transition: .09s;
+  }
+  .mycontainer {
+      background-color: rgba(78, 37, 37, 0.801);
+      width: 400px;
+      height: 300px;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      left: -400px;
+      top: 80px;
+      overflow: hidden;
+      transition: 1.2s;
+  }
+  .club ,.partenaire {
+      margin-top: 5%;
+  }
+  
+  .container,.col-lg-4 {
+      overflow: hidden;
+  }
+  .club .col-lg-6 {
+      border-left: 4px solid brown;
+      padding-top: 8%;
+      overflow: hidden;
+
+  }
+  .club .col-lg-6 .title{
+      
+      padding-top: 8%;
+  } 
+  p {
+      font-weight: bold;
+      opacity: 0.7;
+  }
+  .mybtn {
+color:white;
+font-weight: bold;
+
+background-color: rgba(78, 37, 37, 0.74);
+}
+.card {
+background-color: rgba(245, 241, 241, 0.774);
+}
+.mybtn:hover {
+color: yellow;
+background-color: black;
+
+}
+.partenaire h1 {
+margin-bottom: 5%;
+}
+.image {
+border-radius: 5px;
+background: url('wp1877576-shopping-wallpapers.jpg') center/cover no-repeat;
+animation: anim 8s infinite;
+}
+
+.drop {
+background-color: rgba(78, 37, 37, 0.74);
+color: white;
+font-size: 1.1rem;
+opacity: 1;
+text-align: center;
+}
+.acc {
+color: white;
+border-bottom: 2px solid yellow;
+}
+.acc:hover {
+color: yellow;
+}
+@keyframes anim {
+20% {
+  background-position: 0px -20%;
+}
+40% {
+  background-position: 0px -60%;
+}
+50% {
+  background: url('') center/cover no-repeat;
+  background-position: 0px -80%;
+
+}
+60% {
+  background-position: 4px -90%;
+}
+80% {
+  background-position: 0px -95%;
+
+}
+}
+
+form {
+width: 400px;
+text-align: center;
+}
+form label {
+font-size: 1.1rem;
+opacity: 0.7;
+font-weight: bold;
+}
+/* 
+cube
+*/
+
+
+.contenair{
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+perspective: 800px;
+perspective: origin 50%;
+overflow: hidden;
+}
+.image-cube{
+width: 300px;
+height: 300px;
+transform-style: preserve-3d;
+position: relative;
+transition: 3s;
+}
+.image-cube div {
+height: 300px;
+height: 300px;
+position: absolute;
+}
+img{
+width: 100%;
+height: 100%;
+}
+.devant{
+transform: translateZ(150px);
+}
+.droite{
+transform: rotateY(-270deg) translateX(150px);
+transform-origin: 100% 0;
+} 
+.bats{
+transform: translateZ(-150px) rotateY(180deg);
+}
+.gauche{
+transform: rotateY(270deg) translateX(-150px);
+transform-origin: 0 50%;
+}
+.info{
+position: relative;
+border:1px solid rgba(0, 0, 0, 0);
+bottom:110px;
+width: 8cm;
+left:70px;
+height: 8cm;
+}
+
+/* footer */
+footer {
+text-align: center;
+font-weight: bold;
+margin-top: 15px;
+color: white;
+background: linear-gradient(rgb(248, 218, 173),rgb(78, 37, 37)) center/cover fixed;
+
+/* background: url("wp1877576-shopping-wallpapers.jpg") center/cover fixed; */
+/* background: linear-gradient(rgba(124, 122, 122, 0.342),transparent,rgb(92, 91, 90)); */
+box-shadow: 0px 0px 10px #000;
+
+}
+footer ul li{
+list-style: none;
+}
+.btn-group span:active button{
+transition: 1.5s;
+
+}
+a{
+  text-decoration: none;
+}
+.slider {
+
+}
+.num2 ,.num3,.num4 {
+display: none;
+}
+
+/* video  acceuil*/
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .desc {
+        font-size: 3rem;
+        position: absolute;
+        top: 45%;
+        color: white;
+        width: 500px;
+        left: 32%;
+        background: rgba(63, 63, 63, 0.397);
+
+      }
+      .desc p {
+        font-size: 1.3rem;
+        color: white;
+        opacity: 1;
+      }
+</style>
+</head>
+<body>
+  
+<div class="wrapper">
+  <div class="wrap">
+    <div class="arrow animated bounce"></div>
+      <header>
+        <nav class="navbar navbar-expand-lg position-fixed" style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815);"rgb(61, 46, 46);>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="unnamed.png" alt="" class="img-fluid rounded-circle" style="width: 50px;height:50px;"> <span class="navbar-toggler-icon" style="border-bottom: 2px solid yellow;color: white;">menu</span>         </button>
+          <!-- <h1 class="" style="color: white;">AEENI</h1> -->
+          <div class="collapse navbar-collapse">
+            <a class="navbar-brand " href="#" style="font-size: 2.5rem;color: rgb(243, 243, 243); margin-right: 20%;padding-left: 15%;">
+              <img src="Alternative 2.png" alt="" class="img-fluid " style="height: 60px;width: 100px;">
+              <span>AEENI</span>
+            </a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link acc" href="#" style="font-weight: bold;color: white;">Acceuil<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#club" data-aos="fade-up-left" data-aos-duration="3000">
+                <div class="btn-group">
+                  <span type="button" class="dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Club
+                  </span>
+                  <div class="dropdown-menu dropdown-menu-right drop">
+                    <button class="dropdown-item drop" type="button">C2E</button>
+                    <button class="dropdown-item drop" type="button">C3LF</button>
+                    <button class="dropdown-item drop" type="button">Cyber Sec</button>
+                    <button class="dropdown-item drop" type="button">Multimedia</button>
+                  </div>
+                </div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#organisme" data-aos="fade-down-right" data-aos-duration="3000"><div class="btn-group">
+                  <span type="button" class=" dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Organisme
+                  </span>
+                  <div class="dropdown-menu dropdown-menu-right drop">
+                    <button class="dropdown-item drop" type="button">Présidente</button>
+                    <button class="dropdown-item drop" type="button">Vice Présidents</button>
+                    <button class="dropdown-item drop" type="button">Conseiller</button>
+                  </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-items">
+                <a href="#partenaire" class="nav-link" id="connect" data-aos="fade-down" data-aos-duration="3000">
+                  <div class="btn-group">
+                    <span type="button" class=" dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Partenaire
+                      </span>
+                    <div class="dropdown-menu dropdown-menu-right drop">
+                      <button class="dropdown-item drop" type="button">Malibot</button>
+                      <button class="dropdown-item drop" type="button">Mahefa numerique</button>
+                      <button class="dropdown-item drop" type="button">Ng academie</button>
+                      <button class="dropdown-item drop" type="button">Ng innovation</button>
+                      <button class="dropdown-item drop" type="button">Wecours</button>
+                      <button class="dropdown-item drop" type="button">NgA</button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+                        
+            </ul>
+        </nav>
+      </header>
+      <div class="container-fluid mycontainer position-fixed" style="z-index: 3;">
+        <ul>
+          <li class="annuler" style="position: absolute;right: 0px; top: 0px;">X</li>
+          <h3 style="font-weight: bold;border-bottom: 2px solid yellow;color: white;">AEENI</h3>
+          <li data-aos="slide-up" data-aos-duration="2000"><a href="#club"><img src="groupe.png" alt="" class="img-fluid rounded-circle" style="width: 40px;height: 40px;">  Club</a> </li>
+          <li data-aos="slide-up" data-aos-duration="2000"><a href="#"><img src="groupe.png" alt="" class="img-fluid rounded-circle" style="width: 40px;height: 40px;">  Organisme</a> </li>
+          <li data-aos="slide-right" data-aos-duration="2000"><a href="#partenaire"><img src="partenaire.png" alt="" class="img-fluid rounded-circle" style="width: 40px;height: 40px;">  Partenaire</a> </li>
+          <li data-aos="slide-right" data-aos-duration="2000"><a href="#organisation"><img src="oraga.png" alt="" class="img-fluid rounded-circle" style="width: 40px;height: 40px;">  Organisation</a> </li>
+          <li data-aos="slide-down" data-aos-duration="2000"><a href="#contact"><img src="contact.png" alt="" class="img-fluid rounded-circle" style="width: 40px;height: 40px;">   Contact</a> </li>
+        </ul>
+      </div>
+      <div class="container text-center" style="margin-top: 2%;">
+        <div class="overlay"></div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height: 80vh;">
+          <source src="acceuill.mp4" type="video/mp4">
+        </video>
+        <div class="container desc">
+          <h1 >AEENI</h1>
+          <button class="btn" style="background: rgba(78, 37, 37, 0.801);"></button>
+          
+        <p> (Associtation des Edutiants de l'Ecole Nationale de l'Informatique) </p>
+        <p>La pépinière des élite informaticiennes Malagasy</p>
+        <button class="btn btn-warning " style="font-weight: bold;">En savoir plus</button> 
+
+        </div>
+        <!-- The header content -->
+        <!-- <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h1 class="display-3">Video Header</h1>
+              <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- <h1 style="border-bottom: 2px solid rgba(78, 37, 37, 0.801);padding-top: 5%;">AEENI</h1>
+        <p> (Associtation des Edutiants de l'Ecole Nationale de l'Informatique) </p>
+        <p>La pépinière des élite informaticiennes Malagasy</p>
+        <button class="btn btn-warning " style="font-weight: bold;">En savoir plus</button> -->
+      </div>
+    </div>
+                          <!-- cube -->
+
+                        <!-- deb -->
+      <div class="container col col-lg-12  text-center" style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815); margin-top:10%;" id="organisme">
+        <h1 class=" h1-title" data-aos="slide-left" data-aos-duration="3000">Membre de bureau de l'AEENI</h1>
+        <p></p>
+        <button class="btn btn-warning" style="margin-bottom: 5%;"></button>
+        <div class="coloumn">
+            <div class="row">
+              <div class="col-lg-4 ">
+                <div class="wrapper1">
+                  <div class="contenair">
+                    <div class="image-cube">
+                              <div class="devant">
+                                  <img src="RALINIRINA Rosa Elysabeth.jpg" alt=""  width: 100%;>
+                              </div>
+                              <div class="droite">
+                                  <img src="RAJAONARISINA Rado Ny Aina Andriamampiadamanjaka.jpg" alt="" width: 100%;>
+                              </div> 
+                              <div class="bats">
+                                   <img src="TOTO Elysé Rivelino.jpg" alt=""  width: 100%;>
+                              </div>
+                              <div class="gauche">
+                                  <img src="RALAIVAO Niaiko Michael.JPG" alt=""  width: 100%;>
+                              </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8 text-center" id="text" style="padding-top: 15%;">
+                        <h1>Presidente de l'AEENI</h1>
+                        <P>RALINIRINA Rosa Elysabeth</P>
+              </div>
+            </div>
+        </div>         
+      </div>           
+        <!-- fin -->
+      <div class="container"  style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815);margin-top: 15%;" id="club">
+        <div class="container club text-center slider num1"  >
+              <h1 data-aos="slide-left" data-aos-duration="3000">Club des Etudiants à l'ENI</h1>
+              <p data-aos="slide-right" data-aos-duration="3000">Voici les club d'entre aide de l'Ecole Nationale de l'Informatique (ENI)</p>
+              <button class="btn mybtn" style="margin-bottom: 5%;"></button>
+              <div class="coloumn">
+                <div class="row">
+                  <div class="col-lg-5 " >
+                    <h3 class="title">C2E</h3>
+                    <button class="btn btn-warning"></button>
+                    <p class="text">Communauté d'entraide des étudiants de l'Ecole Nationale d'Informatique (ENI) - Fianarantsoa Madagascar. <br>
+                    </p>
+                    <button class="btn btn-dark">En savoir plus</button>
+                  </div>
+                  <div class="col-lg-6 " data-aos="slide-left" data-aos-duration="3000">
+                    <img src="c2e.png" alt="" class="img-fluid rounded-circle" style="width: 200px;height:200px;">
+                  </div>
+                </div>
+              </div>
+          </div>
+        
+      <div class="container club text-center slider num2" style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815);">
+        <h1> Club des Etudiants à l'ENI</h1>
+        <p>Voici les club d'entre aide de l'Ecole Nationale de l'Informatique (ENI)</p>
+        <div class="coloumn">
+          <div class="row">
+            <div class="col-lg-5" data-aos="fade-up-right" data-aos-duration="3000">
+              <img src="cyber.jpg" alt="" class="img-fluid rounded-circle" style="width: 200px;height:200px;">
+            </div>
+            <div class="col-lg-6 " data-aos="fade-up-left" data-aos-duration="3000">
+              <h3 class="title">Cyber Security</h3>
+              <button class="btn btn-warning"></button>
+              <p class="text">Club de hacking et Security de Ecole Nationale de l'informatique (ENI) <br> Apprendre à attaquer pour mieux defendre </p> 
+              <button class="btn btn-dark">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="container club text-center slider num3" style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815);">
+        <h1>Club des Etudiants à l'ENI</h1>
+        <p>Voici les club d'entre aide de l'Ecole Nationale de l'Informatique (ENI)</p>
+        <div class="coloumn">
+          <div class="row">
+            <div class="col-lg-5" data-aos="slide-right" data-aos-duration="3000">
+              <h3 class="title">Multimedia</h3>
+              <button class="btn btn-warning"></button>
+              <p class="text">Club de Multimedia d'ENI ,siège à l'Ecole Nationale de l'Informatique (ENI) Tanambao Fianarantsoa</p>
+              <button class="btn btn-dark">En savoir plus</button> <br>
+            </div>
+            <div class="col-lg-6 " style="border-left: 4px solid brown;" data-aos="fade-up-left" data-aos-duration="3000">
+              <img src="multimedia.jpg" alt="" class="img-fluid rounded-circle" style="width: 200px;height:200px;">
+            </div>
+          </div>
+        </div>
+      </div>
+                      <!-- <h1 class="text-center" style="color: yellow;font-size: 1.3rem;">----------------------------------------------------------</h1> -->
+      <div class="container club text-center slider num4" style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.815);" >
+        <h1>Club des Etudiants à l'ENI</h1>
+        <p>Voici les club d'entre aide de l'Ecole Nationale de l'Informatique (ENI)</p>
+        <div class="coloumn">
+          <div class="row">
+            <div class="col-lg-5" data-aos="fade-up-right" data-aos-duration="3000">
+              <img src="c3lf.jpg" alt="" class="img-fluid rounded-circle" style="width: 200px;height:200px;">
+            </div>
+            <div class="col-lg-6 " data-aos="slide-left" data-aos-duration="3000">
+            <h3 class="title">C3Lf</h3>
+            <button class="btn btn-warning"></button>
+            <p class="text">Club Linux et Logiciel Libre de Fianarantsoa, siège à l'Ecole Nationale de l'informatique (ENI) Tanambao Fiananarantsoa</p>
+            <button class="btn btn-dark">En savoir plus</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      <div class=" container text-center partenaire" style="background-color: rgba(245, 241, 241, 0.774);margin-top: 15%;" id="partenaire">
+        <h1 >Les Partenaires de l'AEENI </h1>
+        <button class="btn btn-warning" style="margin-bottom: 5%;"></button>
+          <div class="coloumn">
+            <div class="row">
+              <div class="col-lg-4">
+                <h3  data-aos="slide-right" data-aos-duration="3000">Descriptions</h3>
+                <p> <span data-aos="fade-up-left" data-aos-duration="3000">Ces</span> partenaires <span  data-aos="fade-down-right" data-aos-duration="3000">collaborent</span> <span  data-aos="fade-down-left" data-aos-duration="3000">avec</span>l'Ecole Nationale de l'informatique <span  data-aos="fade-up-right" data-aos-duration="3000">dans le but d'innover</span><span> le monde numérique </span> <span>à Madagascar</span></p>
+                <button class="text-center btn mybtn mt-lg-4">En savoir plus</button>
+              </div>
+              <div class="col-lg-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up-left" data-aos-duration="3000" style="width: 90%;height: 60vh;left: 6%; overflow: hidden;">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1">images</li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                  </ol>
+                  
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="#"><img class="d-block w-100 img-fluid" src="equipe.png" alt="First slide" ></a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#"><img class="d-block w-100 " src="kalibot.jpg" alt="Second slide"  style="width:400px;height:500px;"></a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#"><img class="d-block w-100 " src="mahefa numeriqu.png" alt="Third slide"  style="width:400px;height:500px;"></a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#"><img class="d-block w-100" src="ng academie.png" alt="Third slide"  style="width:400px;height:500px;"></a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#"><img class="d-block w-100" src="ng innovation.jpg" alt="Third slide"  style="width:400px;height:500px;"></a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="#"><img class="d-block w-100" src="wecours.png" alt="Third slide"  style="width:400px;height:500px;"></a>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              
+                         <!-- fin slider -------------------------------------------------------------------------------------->
+                        </div>
+                      </div>
+                  </div>
+             
+                
+      <div class="container-fluid" style="margin-top: 15%;" id="contact">
+        <div class="coloumn">
+          <div class="row">
+            <div class="col-lg-6 image" style="margin-top: 15px;" data-aos="slide-up-right" data-aos-duration="3000">
+              <form action="message.php" style="margin-top: 15px;" name="form0">
+                <h3>Commentaire</h3>
+                <button class="btn btn-warning text-center"></button> <br>
+                <label>veuillez entrez votre commentaire</label><br>
+                <input type="text" name="input" id="message" class="form-control" required><br>
+                <label for="">Merci de nous contactez</label>
+                <input type="checkbox" name="check" id="check" class="form-control"><br>
+                <input type="button" value="envoyez" class="btn btn-secondary" id="submit" >
+              </form>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h3  style="border-bottom:2px solid yellow ;">LOCALISATION </h3>
+              <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width: 600px;height: 500px;">
+                <source src="bandicam 2022-08-13 12-27-11-315.mp4" type="video/mp4">
+               </video>
+          
+          </div>
+        </div>
+      </div>         
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+    
+
+
+<footer class="text-center text-white ">
+
+  <div class="container p-4">
+ 
+   <!--Grid row-->
+      <div class="row">
+      
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 margin-top:5%;">
+           <img src="RALINIRINA Rosa Elysabeth.jpg" alt="" style="height: 250px; border-radius:10px;" data-aos="fade-up" data-aos-duration="4000">
+           <h5>Présidente de l'AEENI</h5>
+           <button class="btn btn-light"></button>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase" style="border-bottom: 2px solid yellow;">Club</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#club" class="text-white" data-aos="fade-up-left" data-aos-duration="3000">
+                C2E
+              </a>
+            </li>
+            <li>
+              <a href="#club" class="text-white" data-aos="fade-up-down" data-aos-duration="3000">
+                C3LF
+              </a>
+            </li>
+            <li>
+              <a href="#club" class="text-white" data-aos="fade-up-left" data-aos-duration="3000">Cyber security</a>
+            </li>
+            <li>
+              <a href="#club" class="text-white" data-aos="fade-up-right" data-aos-duration="3000">Multimedia</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase" style="border-bottom: 2px solid yellow;">Partenaires</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#partenaire" class="text-white" data-aos="fade-up-left" data-aos-duration="4000">Malibot</a>
+            </li>
+            <li>
+              <a href="#partenaire" class="text-white" data-aos="fade-up" data-aos-duration="1000">Mahefa numerique</a>
+            </li>
+            <li>
+              <a href="#partenaire" class="text-white" data-aos="slide-right" data-aos-duration="3000">Ng academie</a>
+            </li>
+            <li>
+              <a href="#partenaire"class="text-white" data-aos="slide-left" data-aos-duration="2000">Ng innovation</a>
+            </li>
+            <li>
+              <a href="#partenaire" class="text-white" data-aos="slide-left" data-aos-duration="1000">Wecours</a>
+            </li>
+            <li>
+              <a href="#partenaire" class="text-white" data-aos="slide-right" data-aos-duration="3000">NgA</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase" style="border-bottom: 2px solid yellow;">Contact</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">034 62 680 16</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">034 92 094 71</a>
+            </li>
+
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+
+
+
+
+    <!-- Section: Links -->
+    <section class="">
+    
+      
+      <!--Grid row-->
+      <div class="row">
+      
+  <!--Grid column-->
+  <div class="col-lg-4 col-md-6 mb-4 mb-md-0" style="margin-top: 12%;">
+    <!-- Section: Social media -->
+      <section class="mb-4">
+       <!-- Facebook -->
+      <a class="m-1" href="#!" role="button">
+        <img src="facebook.jpg" alt="" class="rounded-circle" style="width: 50px;height: 50px;" >
+      </a>
+      <!-- Google -->
+      <a class="m-1" href="#!" role="button">
+        <img src="gmail.png" alt="" class="rounded-circle" style="width: 50px;height: 50px;" >
+
+      </a>
+      <!-- Github -->
+      <a class="m-1" href="#!" role="button">
+        <img src="git.jpg" alt="" class="rounded-circle" style="width: 50px;height: 50px;" >
+
+      </a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0 " style="margin-top: 5%;">
+          <h5 class="text-uppercase">AEENI</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">  <img src="unnamed.png" alt="" class="img-fluid rounded-circle" style="height: 60px;width: 60px;"></a>
+            </li>
+           
+          </ul>
+        </div>
+        <!--Grid column-->
+    
+  <!--Grid column-->
+  <div class="col-lg-4 col-md-6 mb-4 mb-md-0" style="margin-top: 12%;">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">Ghosts_coder@github.com</a>
+    </div>
+    <!-- Copyright -->
+       </div>
+       <!--Grid column-->
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </section>
+  <!-- Section: Links -->
+  
+</div>
+<!-- Grid container -->
+
+</footer>
+ 
+
+<script src="hotel.js"></script>
+
+  <script title="text/jquery" src="jquery.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+      $(".navbar-toggler-icon").click(function(){
+          $(".mycontainer").css({
+              
+              left: "0px",
+              transition: "1.2s",
+          })
+      })
+      $(".annuler").click(function(){
+          $('.mycontainer').css({
+              left: "-400px",
+          })
+      })
+
+var mess = document.getElementById('message').value;
+var resu = document.getElementById('result');
+
+$('#message').keypress(function(){
+ $(this).css('background-color', 'yellow')
+})
+$('#message').keydown(function(){
+ $(this).css('background-color', 'green')
+})
+$('#submit').click(function(form0)
+{
+var rado = document.form0.input.value ;
+if(rado==""){
+  $('#message').css('background-color','red')
+}else{
+  $('#submit').click(function(){
+// hskjdh
+swal({
+      title: "Vous etes sûr?",
+      text: "cliquer sur ok pour continuer, cancel pour modifier",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((e) => {
+      if (e) {
+        swal("Vous avez bien envoyer le commentaire", {
+          icon: "success",  
+        });
+      }
+    });
+// sjd
+// if(true){
+//   form.classList.toggle('active');
+// }
+})
+
+}
+})
+  
+$(".num3").css({
+    display: "none",
+})
+$(".num4").css({
+    display: "none",
+})
+setInterval(()=>{
+    $(".num2").css({
+    display: "initial",
+})
+$(".num1").css({
+    display: "none",
+})
+$(".num3").css({
+    display: "none",
+})
+$(".num4").css({
+    display: "none",
+})
+},3000)
+
+setInterval(()=>{
+    $(".num3").css({
+    display: "initial",
+})
+$(".num2").css({
+    display: "none",
+})
+$(".num4").css({
+    display: "none",
+})
+},6000)
+setInterval(()=>{
+    $(".num4").css({
+    display: "initial",
+})
+$(".num3").css({
+    display: "none",
+})
+$(".num2").css({
+    display: "none",
+})
+},9000)
+
+
+
+  </script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			  crossorigin="anonymous"></script>
+  <script src="jquery-3.6.0.js"></script>
+        <script src="index.js"></script>  
+       
+  </body>
+  
+  
+</html>
